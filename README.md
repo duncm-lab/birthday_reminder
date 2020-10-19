@@ -1,12 +1,13 @@
-# birthday_reminder
-Scripts to remind me when peoples birthdays are
+# birthday\_reminder
+#Description
+Scripts to remind me when peoples birthdays are.
 
-./add_birthday -f firstname -s surname -d day -m month
-all parameters are required pass ? for unknown values
+Write birthdays to a text file with the add\_birthday command:
+    ./add\_birthday -f firstname -s surname -d day -m month
 
-./get_birthdays -v dtb=30 birthdays #dtb: birthday is in the next 30 days
+Query the list with the "bdr" command:
+    ./bdr
 
-## TODO
-- make paths more generic
-- more configuration options (option to call on login to terminal etc, currently being done through .zshrc)
-- handle unknown or missing values
+The bdr script passes a variable _dtb_ to the get\_birthdays script, this variable
+represents the number of days into the future you wish to query e.g.
+dtb=100 will result in birthdays in the next 100 days being shown.
