@@ -1,0 +1,4 @@
+1. add persons birthdays to file:
+    "firstname,surname,day,month"
+2. parse file for birthdays due in x days
+3. send matches from parser to login screen

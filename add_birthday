@@ -5,6 +5,7 @@
 # Firstname   Surname    Day    Month  #
 ########################################
 
+# TODO check date is valid
 
 while getopts "f:s:d:m:" opt; do
     case ${opt} in
@@ -27,6 +28,10 @@ then
     touch birthdays
 fi
 
-# TODO deal with duplicates
 
-echo "$fname    $sname    $day    $month" >> birthdays
+
+row="$fname,$sname,$day,$month"
+
+sed -i "/$row/d" birthdays # remove matching lines to prevent duplicates
+
+echo $row >> birthdays

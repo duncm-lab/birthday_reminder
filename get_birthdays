@@ -1,0 +1,22 @@
+#!/usr/bin/gawk -f
+
+BEGIN {
+    FS=","
+    ds_epoch=strftime("%s")
+    cur_year=strftime("%Y")}
+$3 !~ "?"{   
+    day=$3
+    month=$4
+    cur_bday=cur_year" "$4" "$3" 00 00 00"
+    check=mktime(cur_bday)-ds_epoch}
+$3 !~ "?"{
+    if (check > 0){
+        print $1"'s birthday in: "  ((check/60)/60)/24 " days";
+    }
+    else {
+        bday_nxt_yr=cur_year+1" "$4" "$3" 00 00 00"
+        x=mktime(bday_nxt_yr)-ds_epoch
+        print  $1"'s birthday in: " ((x/60)/60)/24 " days";
+    }
+}
+
