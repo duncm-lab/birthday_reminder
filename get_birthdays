@@ -25,7 +25,7 @@ $3 !~ "?"{
 
 $3 !~ "?" {
     if (nxt < dtb){
-        print $1"'s birthday in " nxt " days"
+        print "\t"$1"'s birthday in " nxt " days"
     }
 
     }
