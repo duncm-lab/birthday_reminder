@@ -1,5 +1,5 @@
 # birthday\_reminder
-#Description
+## Description
 Scripts to remind me when peoples birthdays are.
 
 Write birthdays to a text file with the add\_birthday command:
