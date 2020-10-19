@@ -1,4 +1,4 @@
-#!/usr/local/bin/gawk -f
+# vim: set syntax=awk:
 
 BEGIN {
     FS=","

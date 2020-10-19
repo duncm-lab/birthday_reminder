@@ -2,4 +2,4 @@
 app_root=`dirname "$0"`
 gbd=$app_root/get_birthdays
 bdf=$app_root/birthdays
-$gbd -v dtb=100 $bdf | column -c5 -s" " -t | sort -k4
+gawk -v dtb=100 -f $gbd $bdf | column -c5 -s" " -t | sort -k4
