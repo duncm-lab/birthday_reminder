@@ -1,4 +1,4 @@
-#!/usr/bin/gawk -f
+#!/usr/local/bin/gawk -f
 
 BEGIN {
     FS=","
@@ -24,8 +24,9 @@ $3 !~ "?"{
 }
 
 $3 !~ "?" {
+    blue="\033[0;34m"
     if (nxt < dtb){
-        print "\t"$1"'s birthday in " nxt " days"
+        print "\t"blue$1"'s birthday in " nxt " days"
     }
 
     }
